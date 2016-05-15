@@ -1,0 +1,11 @@
+{
+  "name": "flat-ui-colors-syntax",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "repository": "https://github.com/pcperini/flat-ui-colors-syntax"
+}

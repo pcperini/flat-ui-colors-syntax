@@ -1,0 +1,307 @@
+@import "syntax-variables";
+
+.editor-colors {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+.comment {
+  color: @light-green;
+}
+
+.entity {
+  &.name.type {
+    color: @light-blue;
+    font-weight: bold;
+  }
+
+  &.other.inherited-class {
+    color: @light-blue;
+  }
+}
+
+.keyword {
+  color: @light-purple;
+
+  &.control {
+    color: @light-purple;
+  }
+
+  &.operator {
+    color: @syntax-text-color;
+  }
+
+  &.other.special-method {
+    color: @light-blue;
+  }
+
+  &.other.unit {
+    color: @dark-yellow;
+  }
+}
+
+.storage {
+  color: @light-purple;
+}
+
+.constant {
+  color: @dark-yellow;
+
+  &.character.escape,
+  &.placeholder {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.numeric {
+    color: @dark-yellow;
+  }
+
+  &.other.color {
+    color: @turquoise;
+  }
+
+  &.other.symbol {
+    color: @dark-turquoise;
+  }
+}
+
+.variable {
+  color: @syntax-text-color;
+
+  &.interpolation {
+    color: @blue;
+    font-weight: bold;
+  }
+
+  &.parameter.function {
+    color: @syntax-text-color;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @red;
+
+  &.regexp {
+    color: @red;
+  }
+
+  &.other.link {
+    color: @red;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @light-green;
+    }
+
+    &.string {
+      color: @red;
+    }
+
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.heading,
+    &.identity {
+      color: @light-blue;
+    }
+
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.italic {
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: @dark-red;
+  }
+
+}
+
+.support {
+  &.class {
+    color: @light-blue;
+  }
+
+  &.function  {
+    color: @light-blue;
+    font-weight: bold;
+
+    &.any-method {
+      color: @light-blue;
+    }
+  }
+}
+
+.entity {
+  &.name.function {
+    color: @light-blue;
+  }
+
+  &.name.class, &.name.type.class {
+    color: @light-blue;
+  }
+
+  &.name.section {
+    color: @light-blue;
+  }
+
+  &.other.attribute-name {
+    &.id {
+      color: @light-blue;
+    }
+  }
+}
+
+.meta {
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @light-purple;
+  }
+
+  &.selector {
+    color: @light-purple;
+  }
+
+  &.separator {
+    background-color: @gray;
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @purple;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @light-blue;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+
+  &.link {
+    color: @red;
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+}
+
+.link .entity {
+  color: @red;
+}
+
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @orange;
+    font-weight: bold;
+  }
+}
+
+.editor.mini .scroll-view {
+  padding-left: 1px;
+}
